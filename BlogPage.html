@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Design Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Untitled-2.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="color-scheme" content="light">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body, html {
+  height: 100%;
+  line-height: 1.8;}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+	<div class="w3-bar w3-white w3-card" id="myNavbar">
+		<!-- Right-sided navbar links -->
+		<div class="w3-top w3-white w3-wide w3-padding w3-card">
+		<a href="#home" class="w3-bar-item w3-button"><b>chạm</b> studios</a>
+		<div class="w3-right w3-hide-small">
+			<a href="./Home.html" class="w3-bar-item w3-button">Home</a>
+			<a href="./ProductPage.html" class="w3-bar-item w3-button">Shop</a>
+			<a href="./BlogPage.html" class="w3-bar-item w3-button">Blogs</a>
+			<a href="./ContactPage.html" class="w3-bar-item w3-button">Contact</a>
+		</div>
+		</div>
+		 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+   	 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onClick="w3_open()">
+     	 <i class="fa fa-bars"></i>
+   	 </a>
+	</div>
+</div>
+
+<!-- Page End -->
+</div>   
+<br>
+<br>
+<div class="w3-content w3-display-container" style="max-width:1500px">
+<span class="w3-content w3-display-container" style="max-width:1500px">
+	<img class="mySlides" src="./image/BannerHomeBlog/bannerblog2.jpg" style="width:100%"></span>
+	<img class="mySlides" src="./image/BannerHomeBlog/bannerblog1.jpg" style="width:100%">
+ 	<img class="mySlides" src="./image/BannerHomeBlog/bannerblog3.jpg" style="width:100%">
+ 	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+   		<div class="w3-left w3-hover-text-khaki" onClick="plusDivs(-1)">&#10094;</div>
+    	<div class="w3-right w3-hover-text-khaki" onClick="plusDivs(1)">&#10095;</div>
+    	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onClick="currentDiv(1)"></span>
+    	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onClick="currentDiv(2)"></span>
+    	<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onClick="currentDiv(3)"></span>
+	</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+<div class="w3-container" style="padding:40px 16px" id="blogs">
+	<h3 class="w3-center">Our blogs</h3>
+</div>
+  
+ 
+   
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-center w3-margin-bottom">
+      <img src="./image/ImageBlog/4.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><a href="PostofBlog.html"> <b>Thời Trang Bền Vững: Điểm Nhấn Và Tầm Quan Trọng Trong Ngành Thời Trang</b> </a></p>
+        <p style="text-align:justify"> Thời trang bền vững - Một khái niệm tích hợp của <i> "thời trang"</i> và <i>"bền vững"</i>. Đang tạo thành một xu hướng đi đầu trong ngành công nghiệp thời trang.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-center w3-margin-bottom">
+      <img src="./image/ImageBlog/2.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><b>Local Brand là thời trang sẽ trở thành xu hướng</b></p>
+        <p style="text-align:justify"> Phong cách thời trang giới trẻ hiện này trở nên khá phong phú và đa dạng so để lại nhiều ấn tượng cho người nhìn. Sẵn sàng thể hiện cá tính của bản thân.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-center">
+      <img src="./image/ImageBlog/3.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><b>Phong Cách Thời Trang Streetwear:Từ Đường Phố Đến Sàn Catwalk</b></p>
+        <p style="text-align:justify"> Streetwear đã trở thành một phong cách thời trang ảnh hưởng mạnh mẽ đến cả thế giới thời trang. Bài viết này sẽ trình bày lịch sử và xu hướng streetwear.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-center w3-margin-bottom">
+      <img src="./image/ImageBlog/1.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><b>Sự Lôi Cuốn Của Thời Trang Unisex:Sự Tỏa Sáng Trong Sự Đa Dạng Của Giới Tính </b></p>
+        <p style="text-align:justify"> Thời trang unisex đang trở thành một biểu tượng của sự đa dạng giới tính và thể hiện tính cá nhân. Hãy khám phá cách thời trang unisex đã thay đổi cách chúng ta nhìn vào việc tự thể hiện qua trang phục.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-center w3-margin-bottom">
+      <img src="./image/ImageBlog/5.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><b>Thời Trang Thủ Công:Sự Tái Khám Phá Của Sản Phẩm Độc Đáo</b></p>
+        <p style="text-align:justify"> Thời trang thể thao không chỉ dành riêng cho hoạt động thể thao nữa. Bài viết này sẽ giới thiệu những bộ sưu tập thể thao độc đáo và cách bạn có thể tích hợp chúng vào phong cách hàng ngày.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-center"> 
+      <img src="./image/ImageBlog/6.jpg" alt="Norway" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" style="margin: 0px 25px;">
+        <p style="text-align:left"><b>Sự Lôi Cuốn Của Thời Trang Unisex:Sự Tỏa Sáng Trong Sự Đa Dạng Của Giới Tín</b></p>
+        <p style="text-align:justify"> Thời trang unisex đang trở thành một biểu tượng của sự đa dạng giới tính và thể hiện tính cá nhân. Hãy khám phá cách thời trang unisex đã thay đổi cách chúng ta nhìn vào việc tự thể hiện qua trang phục.</p>
+      </div>
+    </div>
+  </div>
+ 
+<div class="w3-container w3-center" style="padding:40px 20px">
+<div class="w3-bar">
+  <a href="#" class="w3-button">«</a>
+  <a href="#" class="w3-button w3-gray">1</a>
+  <a href="#" class="w3-button">2</a>
+  <a href="#" class="w3-button">3</a>
+  <a href="#" class="w3-button">4</a>
+  <a href="#" class="w3-button">»</a>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#blogs" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+</html>
+
+
+
